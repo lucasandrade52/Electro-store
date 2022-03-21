@@ -1,0 +1,21 @@
+.header__topbar {
+  height: 60px;
+  padding: 0 24px;
+  background-color: #1E1F29;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+}
+
+.header__list--item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
