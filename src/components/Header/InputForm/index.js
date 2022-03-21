@@ -1,15 +1,17 @@
 import Button from "../../Button"
 import Input from "../../Input"
+import { ItemData } from "../../Navigation/ItemData.js"
 
 export default function InputForm() {
   return (
     <>
       <form className="header__form">
         <select className="header__select">
-          <option value="0">Todas as Categorias</option>
-          <option value="1">Notebook</option>
-          <option value="2">Acessórios</option>
-          <option value="3">Câmeras</option>
+          {ItemData.map((data, index) => {
+            return (
+              <option value={data.value}>{data.text}</option>
+            )
+          })}
         </select>
         <Input className="header__search" placeholder="Buscar" />
         <Button className="header__button">Pesquisar</Button>
