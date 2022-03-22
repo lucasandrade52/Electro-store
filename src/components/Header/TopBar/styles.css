@@ -17,6 +17,16 @@
   }
 }
 
+@media(max-width: 650px) {
+  .header__topbar {
+    height: 100%;
+  }
+
+  .header__list {
+    flex-wrap: wrap;
+  }
+}
+
 .header__list {
   display: flex;
   gap: 12px;

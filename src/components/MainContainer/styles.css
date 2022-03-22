@@ -93,3 +93,9 @@
     transform: skewX(-40deg) translateX(-100%);
   }
 }
+
+@media(max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+}

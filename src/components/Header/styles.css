@@ -105,3 +105,9 @@
     margin-left: 40%;
   }
 }
+
+@media(max-width: 650px) {  
+  .header__icon {
+    margin-left: 1%;
+  }
+}

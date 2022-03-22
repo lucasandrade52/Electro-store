@@ -16,7 +16,7 @@ export default function Container() {
             </figure>
             <section className="container__info">
               <h2>{data.text}</h2>
-              <a href={data.link}>Compre agora <BsArrowRightCircle /></a>
+              <a key={index} href={data.link}>Compre agora <BsArrowRightCircle /></a>
             </section>
           </section>
         )
