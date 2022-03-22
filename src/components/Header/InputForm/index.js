@@ -9,7 +9,7 @@ export default function InputForm() {
         <select className="header__select">
           {ItemData.map((data, index) => {
             return (
-              <option value={data.value}>{data.text}</option>
+              <option key={index} value={data.value}>{data.text}</option>
             )
           })}
         </select>

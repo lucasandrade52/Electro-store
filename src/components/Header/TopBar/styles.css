@@ -8,6 +8,15 @@
   align-items: center;
 }
 
+@media(max-width: 1024px) {
+  .header__topbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
 .header__list {
   display: flex;
   gap: 12px;

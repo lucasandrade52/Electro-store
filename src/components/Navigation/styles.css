@@ -15,3 +15,9 @@
   border-bottom: 4px solid #D10024;
   color: #D10024;
 }
+
+@media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+}

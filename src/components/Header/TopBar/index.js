@@ -17,7 +17,7 @@ export default function TopBar() {
           <FiMail color="#D10024" />email@email.com
         </ItemList>
         <ItemList className="header__list--item">
-          <MdLocationOn color="#D10024" />1030 5ª Avenue
+          <MdLocationOn color="#D10024" />1030 5th Avenue
         </ItemList>
       </List>
 
