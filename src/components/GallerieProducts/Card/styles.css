@@ -1,0 +1,47 @@
+.container__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__cards--products {
+  width: 20%;
+  height: 415px;
+  margin: 24px;
+  box-shadow: 0px 0px 0px 0px #e4e7ed, 0px 0px 0px 1px #e4e7ed;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.products__img {
+  width: 100%;
+}
+
+.products__img img {
+  width: 100%;
+}
+
+.products__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.price {
+  color: #D10024;
+  font-weight: bold;
+}
+
+.oldprice {
+  text-decoration: line-through;
+  font-size: 14px;
+}
