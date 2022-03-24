@@ -6,6 +6,7 @@
 
 .container__products--header h2 {
   padding-left: 24px;
+  text-transform: uppercase;
 }
 
 .container_nav {
@@ -25,8 +26,14 @@
   color: #D10024;
 }
 
-@media (max-width: 1024px) {
-  .container_nav {
-    display: none;
+@media (max-width: 650px) {
+  .container__products--header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_navlist {
+    gap: 5px;
+    padding: 0 0;
   }
 }
