@@ -1,8 +1,9 @@
 import Header from './components/Header'
+import Navigation from './components/Navigation'
 import MainContainer from './components/MainContainer';
 import Container from './components/MainContainer/Container';
-import Navigation from './components/Navigation'
 import GallerieProducts from './components/GallerieProducts';
+import Banner from './components/Banner'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <MainContainer className="container__products">
         <GallerieProducts />
       </MainContainer>
-
+      <Banner />
     </>
   );
 }

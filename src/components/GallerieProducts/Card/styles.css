@@ -75,6 +75,7 @@
   font-size: 12px;
   padding: 2px;
   height: 40px;
+  width: 60%;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 40px;
@@ -84,7 +85,7 @@
 
 .btn-buy:hover {
   background-color: #fff;
-  width: 85%;
+  width: 75%;
   color: #D10024;
   border: 2px solid #D10024;
   background-image: url(/public/images/cart.svg);
