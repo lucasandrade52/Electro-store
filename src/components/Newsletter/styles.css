@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 10%;
+  left: 0%;
   top: -4%;
   z-index: -1;
 }
@@ -90,4 +90,29 @@
   .container__search {
     width: 70%;
   }
+}
+
+.container__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 0px;
+}
+
+.container__icons--item {
+  border: 2px solid #E4E7ED;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__icons--item:hover {
+  background-color: #E4E7ED;
+}
+
+.container__icons--item a:hover {
+  color: #D10024;
 }

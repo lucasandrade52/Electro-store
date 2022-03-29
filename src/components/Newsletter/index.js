@@ -1,6 +1,7 @@
 import Title from "../GallerieProducts/Header/Title";
 import Input from "../Input"
 import Button from "../Button"
+import SocialIcons from "../SocialIcons"
 import './styles.css'
 
 export default function Newsletter() {
@@ -23,6 +24,7 @@ export default function Newsletter() {
           >
             Inscreva-se
           </Button>
+          <SocialIcons />
         </section>
       </section>
     </section>
