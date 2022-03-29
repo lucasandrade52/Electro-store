@@ -3,6 +3,7 @@ import Navigation from './components/Navigation'
 import MainContainer from './components/MainContainer';
 import Container from './components/MainContainer/Container';
 import GallerieProducts from './components/GallerieProducts';
+import SliderCard from './components/SliderCard'
 import Banner from './components/Banner'
 
 function App() {
@@ -14,9 +15,17 @@ function App() {
         <Container />
       </MainContainer>
       <MainContainer className="container__products">
-        <GallerieProducts />
+        <GallerieProducts title="Novos produtos" />
       </MainContainer>
       <Banner />
+      <MainContainer >
+        <GallerieProducts title="Mais vendidos" />
+      </MainContainer>
+      <MainContainer className="container__slider">
+        <SliderCard />
+        <SliderCard />
+        <SliderCard />
+      </MainContainer>
     </>
   );
 }

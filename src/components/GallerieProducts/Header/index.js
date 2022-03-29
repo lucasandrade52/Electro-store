@@ -1,11 +1,12 @@
 import List from "../../Header/TopBar/List"
+import Title from "./Title"
 import ItemList from "../../Header/TopBar/ItemList"
 import './styles.css'
 
-export default function Header() {
+export default function Header({ title }) {
   return (
     <section className="container__products--header">
-      <h2>New Products</h2>
+      <Title>{title}</Title>
       <nav className="container_nav">
         <List className="container_navlist">
           <ItemList className="container_navlist--item">
