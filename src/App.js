@@ -3,8 +3,9 @@ import Navigation from './components/Navigation'
 import MainContainer from './components/MainContainer';
 import Container from './components/MainContainer/Container';
 import GallerieProducts from './components/GallerieProducts';
-import SliderCard from './components/SliderCard'
 import Banner from './components/Banner'
+import SliderCard from './components/SliderCard'
+import Newsletter from './components/Newsletter'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <SliderCard />
         <SliderCard />
       </MainContainer>
+      <Newsletter />
     </>
   );
 }

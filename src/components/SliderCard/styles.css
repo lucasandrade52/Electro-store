@@ -15,6 +15,22 @@
   padding: 0px 24px;
 }
 
+@media(max-width: 1024px) {
+  .container__sliders {
+    width: 45%;
+  }
+
+  .container__slider {
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 650px) {
+  .container__sliders {
+    width: 90%
+  }
+}
+
 .container__control {
   display: flex;
   align-items: center;
