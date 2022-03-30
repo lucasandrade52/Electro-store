@@ -73,10 +73,41 @@
 
 .header__button {
   background-color: #D10024;
-  width: 110px;
+  width: 150px;
   color: #ffffff;
   font-weight: bold;
   height: 40px;
   border-radius: 0px 20px 20px 0px;
   cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+  .header__container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header__title {
+    padding: 24px;
+  }
+
+  .header__form {
+    padding: 0px 0px 32px;
+    width: 100%;
+  }
+
+  .header__search {
+    width: 100%;
+  }
+
+  .header__icon {
+    padding: 12px 0px 50px;
+    margin-left: 40%;
+  }
+}
+
+@media(max-width: 650px) {  
+  .header__icon {
+    margin-left: 1%;
+  }
 }

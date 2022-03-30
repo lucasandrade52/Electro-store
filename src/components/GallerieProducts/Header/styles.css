@@ -1,0 +1,39 @@
+.container__products--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__products--header h2 {
+  padding-left: 24px;
+  text-transform: uppercase;
+}
+
+.container_nav {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.container_navlist {
+  display: flex;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.container_navlist a:hover {
+  color: #D10024;
+}
+
+@media (max-width: 650px) {
+  .container__products--header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container_navlist {
+    gap: 5px;
+    padding: 0 0;
+  }
+}
