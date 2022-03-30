@@ -6,6 +6,7 @@ import GallerieProducts from './components/GallerieProducts';
 import Banner from './components/Banner'
 import SliderCard from './components/SliderCard'
 import Newsletter from './components/Newsletter'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <SliderCard />
       </MainContainer>
       <Newsletter />
+      <Footer />
     </>
   );
 }
