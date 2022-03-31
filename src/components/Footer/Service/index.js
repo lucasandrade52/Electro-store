@@ -1,5 +1,5 @@
-import List from "../../Header/TopBar/List"
-import ItemList from "../../Header/TopBar/ItemList"
+import List from "../../Common/List"
+import ItemList from "../../Common/ItemList"
 import Title from "../../GallerieProducts/Header/Title"
 
 const service = ["Minha Conta", "Ver o carrinho", "Lista de Favoritos", "Ver meu Pedido", "Ajuda"]

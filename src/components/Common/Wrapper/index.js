@@ -1,4 +1,4 @@
-export default function MainContainer({ className, children }) {
+export default function Wrapper({ className, children }) {
   return (
     <section className={className}>
       {children}

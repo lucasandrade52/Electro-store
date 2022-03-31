@@ -1,8 +1,8 @@
 import { ImPhone } from "react-icons/im"
 import { FiMail } from "react-icons/fi"
 import { MdLocationOn } from "react-icons/md"
-import List from "../../Header/TopBar/List"
-import ItemList from "../../Header/TopBar/ItemList"
+import List from "../../Common/List"
+import ItemList from "../../Common/ItemList"
 import Title from "../../GallerieProducts/Header/Title"
 
 const aboutUs = [
