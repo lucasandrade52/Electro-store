@@ -1,4 +1,4 @@
-.header__topbar {
+.topbar {
   height: 60px;
   padding: 0 24px;
   background-color: #1E1F29;
@@ -8,8 +8,19 @@
   align-items: center;
 }
 
+.topbar__list {
+  display: flex;
+  gap: 12px;
+}
+
+.topbar__item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
 @media(max-width: 1024px) {
-  .header__topbar {
+  .topbar {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -18,22 +29,11 @@
 }
 
 @media(max-width: 650px) {
-  .header__topbar {
+  .topbar {
     height: 100%;
   }
 
-  .header__list {
+  .topbar__list {
     flex-wrap: wrap;
   }
-}
-
-.header__list {
-  display: flex;
-  gap: 12px;
-}
-
-.header__list--item {
-  display: flex;
-  gap: 5px;
-  align-items: center;
 }

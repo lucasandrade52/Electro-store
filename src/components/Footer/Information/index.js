@@ -1,6 +1,6 @@
-import List from "../../Header/TopBar/List"
+import List from "../../Common/List"
 import Title from "../../GallerieProducts/Header/Title"
-import ItemList from "../../Header/TopBar/ItemList"
+import ItemList from "../../Common/ItemList"
 
 const informations = ["Sobre nós", "Contatos", "Políticas", "Ordens e Devolução", "Termos e Condições"]
 

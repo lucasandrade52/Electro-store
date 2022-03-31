@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: baseline;
+  font-size: 65px;
+}
+
+.logo::after {
+  content: '';
+  background-color: #D10024;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+@media(max-width: 1024px) {
+  .logo {
+    padding: 24px;
+  }
+}

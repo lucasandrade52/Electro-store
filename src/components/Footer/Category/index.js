@@ -1,5 +1,5 @@
-import List from "../../Header/TopBar/List";
-import ItemList from "../../Header/TopBar/ItemList";
+import List from "../../Common/List";
+import ItemList from "../../Common/ItemList";
 import Title from "../../GallerieProducts/Header/Title";
 
 const categories = ["Ofertas", "Notebooks", "Smartphones", "Câmeras", "Acessórios"]

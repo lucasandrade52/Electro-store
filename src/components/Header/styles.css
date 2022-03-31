@@ -1,22 +1,4 @@
 .header {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.header__title {
-  display: flex;
-  align-items: baseline;
-  font-size: 65px;
-}
-
-.header__title::after {
-  content: '';
-  background-color: #D10024;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-}
-
-.header__container {
   height: 120px;
   padding: 0 24px;
   background-color: #15161D;
@@ -82,13 +64,9 @@
 }
 
 @media(max-width: 1024px) {
-  .header__container {
+  .header {
     flex-direction: column;
     height: 100%;
-  }
-
-  .header__title {
-    padding: 24px;
   }
 
   .header__form {

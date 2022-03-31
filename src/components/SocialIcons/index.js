@@ -1,5 +1,5 @@
-import List from "../Header/TopBar/List"
-import ItemList from "../Header/TopBar/ItemList"
+import List from "../Common/List"
+import ItemList from "../Common/ItemList"
 import { GrFacebookOption, GrTwitter, GrInstagram, GrPinterest } from "react-icons/gr"
 
 export default function SocialIcons() {

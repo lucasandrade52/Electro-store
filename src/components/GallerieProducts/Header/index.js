@@ -1,6 +1,6 @@
-import List from "../../Header/TopBar/List"
+import List from "../../Common/List"
 import Title from "./Title"
-import ItemList from "../../Header/TopBar/ItemList"
+import ItemList from "../../Common/ItemList"
 import './styles.css'
 
 export default function Header({ title }) {

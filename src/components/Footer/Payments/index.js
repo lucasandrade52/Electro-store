@@ -1,6 +1,6 @@
 import { FaCcVisa, FaRegCreditCard, FaCcMastercard, FaCcPaypal, FaCcDiscover, FaCreditCard } from "react-icons/fa"
-import List from "../../Header/TopBar/List"
-import ItemList from "../../Header/TopBar/ItemList"
+import List from "../../Common/List"
+import ItemList from "../../Common/ItemList"
 
 export default function Payments() {
   return (
