@@ -1,0 +1,13 @@
+.icons {
+  font-size: 22px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.icons:hover {
+  color: #D10024;
+}
+
+.icons.favorite {
+  color: #D10024;
+}

@@ -31,6 +31,12 @@
   }
 }
 
+.container__list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .container__list h2 {
   padding: 20px 0px;
 }

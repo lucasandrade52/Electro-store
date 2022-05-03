@@ -10,15 +10,15 @@
 }
 
 .products__avaliation::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    height: 1px;
-    width: 100%;
-    background-color: #e4e7ed;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: #e4e7ed;
 }
 
 .products__avaliation--stars svg {
@@ -45,8 +45,13 @@
 
 .icons {
   font-size: 22px;
+  cursor: pointer;
 }
 
 .icons:hover {
+  color: #D10024;
+}
+
+.icons .favorite {
   color: #D10024;
 }

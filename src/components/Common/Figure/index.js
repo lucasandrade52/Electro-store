@@ -1,4 +1,4 @@
-export default function Avatar({ className, children }) {
+export default function Figure({ className, children }) {
   return (
     <figure className={className}>
       {children}

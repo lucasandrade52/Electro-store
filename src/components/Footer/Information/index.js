@@ -1,5 +1,5 @@
 import List from "../../Common/List"
-import Title from "../../GallerieProducts/Header/Title"
+import TitleH2 from "../../Common/TitleH2"
 import ItemList from "../../Common/ItemList"
 
 const informations = ["Sobre nós", "Contatos", "Políticas", "Ordens e Devolução", "Termos e Condições"]
@@ -7,11 +7,11 @@ const informations = ["Sobre nós", "Contatos", "Políticas", "Ordens e Devoluç
 export default function Information() {
   return (
     <List className="container__list">
-      <Title>Informações</Title>
+      <TitleH2>Informações</TitleH2>
       {informations.map((data, index) => {
         return (
-          <ItemList className="container__list--item">
-            <a key={index} href="#">{data}</a>
+          <ItemList key={index} className="container__list--item">
+            <a href="#">{data}</a>
           </ItemList>
         )
       })}

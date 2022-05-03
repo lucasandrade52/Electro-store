@@ -1,6 +1,6 @@
 import BannerImage from './BannerImage'
 import BannerCounter from './BannerCounter'
-import Button from "../Button"
+import Button from "../Common/Button"
 import './styles.css'
 import BannerTitle from './BannerTitle'
 

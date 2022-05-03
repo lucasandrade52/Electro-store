@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import Navigation from './components/Navigation'
 import Wrapper from './components/Common/Wrapper';
-import Container from './components/Container';
+import CampaingCard from './components/CampaingCard';
 import GallerieProducts from './components/GallerieProducts';
 import Banner from './components/Banner'
 import SliderCard from './components/SliderCard'
@@ -14,11 +14,9 @@ function App() {
       <Header />
       <Navigation />
       <Wrapper className="container__main">
-        <Container />
+        <CampaingCard />
       </Wrapper>
-      <Wrapper className="container__products">
-        <GallerieProducts title="Novos produtos" />
-      </Wrapper>
+      <GallerieProducts title="Novos produtos" />
       <Banner />
       <Wrapper >
         <GallerieProducts title="Mais vendidos" />

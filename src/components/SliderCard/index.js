@@ -1,28 +1,29 @@
-import Card from "../GallerieProducts/Card";
-import Avatar from "../GallerieProducts/Avatar"
+import Figure from "../Common/Figure"
+import Image from "../Common/Image"
 import InfoProducts from "../GallerieProducts/InfoProducts"
 import Prices from "../GallerieProducts/Prices"
-import { ProductData } from "../GallerieProducts/Card/ProductData"
-import Title from "../GallerieProducts/Header/Title";
-import Control from "../Control"
+import { ProductData } from "../GallerieProducts/Carousel/ProductData"
+import Title from "../Common/TitleH2";
+import Control from "../Common/Control"
 import './styles.css'
+import Wrapper from "../Common/Wrapper";
 
 
 export default function SliderCard() {
   const filteredArray = ProductData.slice(0, 3);
 
   return (
-    <Card className="container__sliders">
+    <Wrapper className="container__sliders">
       <section className="container__control">
         <Title>Mais vendidos</Title>
-        <Control />
+        <Control className="control" />
       </section>
       {filteredArray.map((data, index) => {
         return (
-          <section className="container__slider--products">
-            <Avatar className="slider__img">
-              <img key={index} src={data.avatar} alt="" />
-            </Avatar>
+          <section key={index} className="container__slider--products">
+            <Figure className="slider__img">
+              <Image src={data.image} alt="" />
+            </Figure>
             <InfoProducts className="slider__info">
               <p className="category">{data.category}</p>
               <h2 className="name">{data.name}</h2>
@@ -34,6 +35,6 @@ export default function SliderCard() {
           </section>
         )
       })}
-    </Card>
+    </Wrapper>
   )
 }
