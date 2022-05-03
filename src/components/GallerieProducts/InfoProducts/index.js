@@ -1,4 +1,4 @@
-export default function Prices({ className, children }) {
+export default function InfoProducts({ className, children }) {
   return (
     <section className={className}>
       {children}

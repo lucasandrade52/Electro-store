@@ -1,6 +1,6 @@
-import Title from "../GallerieProducts/Header/Title";
-import Input from "../Input"
-import Button from "../Button"
+import TitleH2 from "../Common/TitleH2";
+import Input from "../Common/Input"
+import Button from "../Common/Button"
 import SocialIcons from "../SocialIcons"
 import './styles.css'
 
@@ -13,7 +13,7 @@ export default function Newsletter() {
         </figure>
       </div>
       <section className="container__item">
-        <Title>Assine para receber nossa novidades</Title>
+        <TitleH2>Assine para receber nossa novidades</TitleH2>
         <section className="container__input">
           <Input
             className="container__search"

@@ -3,7 +3,8 @@ import { FiMail } from "react-icons/fi"
 import { MdLocationOn } from "react-icons/md"
 import List from "../../Common/List"
 import ItemList from "../../Common/ItemList"
-import Title from "../../GallerieProducts/Header/Title"
+import TitleH2 from "../../Common/TitleH2"
+import Wrapper from "../../Common/Wrapper"
 
 const aboutUs = [
   {
@@ -16,26 +17,26 @@ const aboutUs = [
 
 export default function AboutUs() {
   return (
-    <List className="container__list">
-      <Title>Sobre Nós</Title>
+    <Wrapper className="container__list">
+      <TitleH2>Sobre Nós</TitleH2>
       {aboutUs.map((data, index) => {
         return (
-          <>
+          <List key={index} >
             <ItemList className="container__list--item">
-              <a key={index} href="#">{data.about}</a>
+              <a href="#">{data.about}</a>
             </ItemList>
             <ItemList className="container__list--item">
-              <a key={index} href="#"><MdLocationOn color="#D10024" />{data.adress}</a>
+              <a href="#"><MdLocationOn color="#D10024" />{data.adress}</a>
             </ItemList>
             <ItemList className="container__list--item">
-              <a key={index} href="#"><ImPhone color="#D10024" />{data.phone}</a>
+              <a href="#"><ImPhone color="#D10024" />{data.phone}</a>
             </ItemList>
             <ItemList className="container__list--item">
-              <a key={index} href="#"><FiMail color="#D10024" />{data.mail}</a>
+              <a href="#"><FiMail color="#D10024" />{data.mail}</a>
             </ItemList>
-          </>
+          </List>
         )
       })}
-    </List>
+    </Wrapper>
   )
 }

@@ -2,6 +2,7 @@ import List from "../Common/List"
 import ItemList from "../Common/ItemList"
 import { ItemData } from "./ItemData"
 import './styles.css'
+import Link from "../Common/Link"
 
 export default function Navigation() {
   return (
@@ -9,8 +10,10 @@ export default function Navigation() {
       <List className="navigation__list">
         {ItemData.map((data, index) => {
           return (
-            <ItemList className="navigation__list--item">
-              <a key={index} href={data.link}>{data.text}</a>
+            <ItemList key={index} className="navigation__list--item">
+              <Link className="btn" href={data.link}>
+                {data.text}
+              </Link>
             </ItemList>
           )
         })}

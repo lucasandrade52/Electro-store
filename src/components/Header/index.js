@@ -1,9 +1,10 @@
 import TopBar from "./TopBar"
 import Logo from "../Common/Logo"
-import InputForm from "./InputForm"
+import InputForm from "../Common/InputForm"
 import FavoriteIcon from "./FavoriteIcon"
 import CartIcon from "./CartIcon"
 import './styles.css'
+import Wrapper from "../Common/Wrapper"
 
 
 export default function Header() {
@@ -13,10 +14,10 @@ export default function Header() {
       <header className="header">
         <Logo />
         <InputForm />
-        <section className="header__icon">
+        <Wrapper className="header__icon">
           <FavoriteIcon />
           <CartIcon />
-        </section>
+        </Wrapper>
       </header>
     </>
   )
