@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { ProductData } from "../ProductData"
+import { useSelector } from 'react-redux'
 import Image from "../../../Common/Image";
 import Figure from "../../../Common/Figure";
 import Wrapper from "../../../Common/Wrapper";
@@ -24,6 +24,8 @@ export default function CarouselItem({ products }) {
   if (!Array.isArray(products) || products.length <= 0) {
     return null;
   }
+
+  const ProductData = useSelector((state) => state.products);
 
   return (
     <>
