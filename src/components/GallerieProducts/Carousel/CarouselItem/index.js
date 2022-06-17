@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { useSelector } from 'react-redux'
+import { useEffect, useRef } from "react";
+import { useSelector, useDispatch } from 'react-redux'
 import Image from "../../../Common/Image";
 import Figure from "../../../Common/Figure";
 import Wrapper from "../../../Common/Wrapper";
@@ -9,8 +9,11 @@ import Prices from "../../Prices";
 import ProductScore from "../../Stars/ProductScore";
 import AddCartButton from "../../AddCartButton"
 import Control from "../../../Common/Control"
+import { addItem } from "../../../../store/cart"
 
 export default function CarouselItem({ products }) {
+  const ProductData = useSelector((state) => state.products);
+  const dispatch = useDispatch();
   const carousel = useRef(null)
 
   const nextSlide = () => {
@@ -25,7 +28,9 @@ export default function CarouselItem({ products }) {
     return null;
   }
 
-  const ProductData = useSelector((state) => state.products);
+  function addItemCart(data) {
+    dispatch(addItem(data))
+  }
 
   return (
     <>
@@ -49,7 +54,7 @@ export default function CarouselItem({ products }) {
                   <MenuIcons id={id} name={name} />
                 </InfoProducts>
               </Wrapper>
-              <AddCartButton />
+              <AddCartButton data={data} addItemCart={addItemCart} />
             </Wrapper>
           )
         })}
