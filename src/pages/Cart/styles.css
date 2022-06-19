@@ -1,0 +1,140 @@
+.body {
+  background-color: #E5E7EB;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 50px auto 0;
+  width: 70vw;
+  min-height: 75vh;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container__right {
+  background-color: #ffffff;
+  width: 65%;
+  border-radius: 8px 0px 0px 8px;
+  padding: 24px 35px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__right header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #16161631;
+  padding: 24px 0;
+}
+
+.main__products {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 25px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.products__title {
+  padding: 24px 0;
+  color: #9D9D9D;
+  text-transform: uppercase;
+}
+
+.container__right footer a {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #D10024;
+  font-weight: bold;
+}
+
+.container__right footer a svg {
+  width: 35px;
+  height: 35px;
+}
+
+.container__left {
+  background-color: #F6F6F6;
+  width: 35%;
+  border-radius: 0px 8px 8px 0px;
+  padding: 24px 35px;
+}
+
+.container__left header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #16161631;
+  padding: 24px 0;
+}
+
+.container__left footer {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer button {
+  height: 32px;
+  background-color: #3483fa;
+  border: none;
+  cursor: pointer;
+  transition: all .4s;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+footer button:hover {
+  opacity: 80%;
+  background-color: #1259c3;
+}
+
+@media(max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .container__right,
+  .container__left {
+    width: 100%;
+  }
+}
+
+@media(max-width: 650px) {
+  .container {
+    margin: 12px auto 0;
+    width: 90vw;
+  }
+
+  .container__right,
+  .container__left {
+    width: 100%;
+  }
+
+  .main__products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

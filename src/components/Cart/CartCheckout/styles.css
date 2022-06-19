@@ -1,0 +1,53 @@
+.resume__cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 24px 0;
+  border-bottom: 1px solid #16161631;
+}
+
+.resume__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.cost__delivery {
+  height: 32px;
+}
+
+.codePromotion__title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.codePromotion__title h4 {
+  text-transform: uppercase;
+}
+
+.codePromotion__title input {
+  height: 32px;
+  padding: 0px 4px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.codePromotion__title button {
+  height: 32px;
+  background-color: #fb8332;
+  border: none;
+  cursor: pointer;
+  transition: all .4s;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 35%;
+}
+
+.codePromotion__title button:hover {
+  opacity: 80%;
+  background-color: #c85000;
+}
