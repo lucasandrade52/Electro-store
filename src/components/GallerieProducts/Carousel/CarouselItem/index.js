@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import Image from "../../../Common/Image";
 import Figure from "../../../Common/Figure";
@@ -30,6 +30,7 @@ export default function CarouselItem({ products }) {
 
   function addItemCart(data) {
     dispatch(addItem(data))
+    console.log(data)
   }
 
   return (

@@ -2,16 +2,9 @@ import { MdAdd, MdRemove, MdDelete } from "react-icons/md"
 import { useState } from "react";
 import './styles.css'
 
-export default function CartItem() {
-  const [value, setValue] = useState(1)
+export default function CartItem({ item, removeItemCart }) {
+  const [count, setCount] = useState(1)
 
-  function increment() {
-    setValue(value + 1)
-  }
-
-  function decrement() {
-    setValue(value - 1)
-  }
 
   return (
     <section className="main__products">
@@ -20,11 +13,11 @@ export default function CartItem() {
           <h5>Detalhe dos produtos</h5>
         </section>
         <section className="product__details">
-          <img src="/images/laptop/laptop1.jpg" alt="" />
+          <img src={item.image} alt="" />
           <section className="details">
-            <p className="name" ><strong>Name</strong></p>
-            <p>Categoria</p>
-            <button type="button">
+            <p className="name" ><strong>{item.name}</strong></p>
+            <p>{item.category}</p>
+            <button type="button" onClick={() => removeItemCart(item.id)}>
               <MdDelete /> excluir
             </button>
           </section>
@@ -35,11 +28,11 @@ export default function CartItem() {
           <h5>Quantidade</h5>
         </section>
         <section className="quantity__value">
-          <button type="button" id="menos" onClick={decrement} >
+          <button type="button" id="menos" onClick={() => setCount(count - 1)} >
             <MdRemove />
           </button>
-          <p>{value}</p>
-          <button type="button" id="mais" onClick={increment} >
+          <p>{count}</p>
+          <button type="button" id="mais" onClick={() => setCount(count + 1)} >
             <MdAdd />
           </button>
         </section>
@@ -48,7 +41,7 @@ export default function CartItem() {
         <section className="products__title">
           <h5>Preço</h5>
         </section>
-        <section className="value"><strong>R$250</strong></section>
+        <section className="value"><strong>{item.price}</strong></section>
       </section>
       <section className="totalPrice">
         <section className="products__title">

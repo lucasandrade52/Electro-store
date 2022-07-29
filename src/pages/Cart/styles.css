@@ -1,6 +1,15 @@
 .body {
   background-color: #E5E7EB;
   min-height: 100vh;
+  position: relative;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px;
+  text-align: center;
 }
 
 .container {
@@ -137,4 +146,22 @@ footer button:hover {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.body__footer {
+  height: 35px;
+  position: absolute;
+  bottom: 0px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #c5c7cc34;
+  cursor: pointer;
+}
+
+.body__footer h2 {
+  font-weight: 400;
+  color: #000;
 }

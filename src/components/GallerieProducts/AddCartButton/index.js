@@ -7,7 +7,7 @@ export default function AddCartButton({ data, addItemCart }) {
       <Button
         className="btn-buy"
         onClick={() => addItemCart(data)}
-      >Adicionar ao Carrinho
+      ><span className="btn-text">Adicionar ao Carrinho</span>
       </Button>
     </div>
   )
