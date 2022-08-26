@@ -1,20 +1,27 @@
 import { IoIosArrowRoundBack } from "react-icons/io"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux";
-import { removeItem } from '../../store/cart'
+import { removeItem, increment } from '../../store/cart'
+import { Link } from "react-router-dom";
+import { calculateTotalCart } from '../../store/cart'
+import FormatPrice from '../../utils/formatPrice'
 import TopBar from "../../components/Header/TopBar";
 import CartItem from "../../components/Cart/CartItem";
 import CartCheckout from "../../components/Cart/CartCheckout";
 import './styles.css'
-import { Link } from "react-router-dom";
 
 export default function Cart() {
   const length = useSelector(state => state.cart.length)
   const cart = useSelector(state => state.cart)
+  const total = useSelector(calculateTotalCart)
   const dispatch = useDispatch()
 
   function removeItemCart(id) {
     dispatch(removeItem(id))
+  }
+
+  function incrementItemCart(quantity) {
+    dispatch(increment(quantity))
   }
 
   return (
@@ -25,7 +32,7 @@ export default function Cart() {
           <section className="container__right">
             <header >
               <h2>Meu Carrinho</h2>
-              <p><strong>{length} itens</strong></p>
+              <h3><strong>{length} itens</strong></h3>
             </header>
             <section className="container__scroll">
               {cart.map(item => (
@@ -33,6 +40,7 @@ export default function Cart() {
                   key={item.id}
                   item={item}
                   removeItemCart={removeItemCart}
+                  incrementItemCart={incrementItemCart}
                 />
               ))}
             </section>
@@ -49,7 +57,7 @@ export default function Cart() {
             <footer className="buyCart">
               <section className="footer__title">
                 <h3>Custo Total</h3>
-                <h3>R$500,00</h3>
+                <h3><FormatPrice format="$0.00">{total}</FormatPrice></h3>
               </section>
               <button type="button">
                 Comprar

@@ -1,10 +1,10 @@
+import { useSelector } from "react-redux"
 import { MdAdd, MdRemove, MdDelete } from "react-icons/md"
-import { useState } from "react";
 import './styles.css'
+import FormatPrice from '../../../utils/formatPrice'
 
-export default function CartItem({ item, removeItemCart }) {
-  const [count, setCount] = useState(1)
-
+export default function CartItem({ item, removeItemCart, incrementItemCart }) {
+  const length = useSelector(state => state.cart.length)
 
   return (
     <section className="main__products">
@@ -28,11 +28,19 @@ export default function CartItem({ item, removeItemCart }) {
           <h5>Quantidade</h5>
         </section>
         <section className="quantity__value">
-          <button type="button" id="menos" onClick={() => setCount(count - 1)} >
+          <button
+            type="button"
+            id="menos"
+            onClick={() => incrementItemCart(item.quantity - 1)}
+          >
             <MdRemove />
           </button>
-          <p>{count}</p>
-          <button type="button" id="mais" onClick={() => setCount(count + 1)} >
+          <p>{item.quantity}</p>
+          <button
+            type="button"
+            id="mais"
+            onClick={() => incrementItemCart(item.quantity + 1)}
+          >
             <MdAdd />
           </button>
         </section>
@@ -41,13 +49,20 @@ export default function CartItem({ item, removeItemCart }) {
         <section className="products__title">
           <h5>Preço</h5>
         </section>
-        <section className="value"><strong>{item.price}</strong></section>
+        <section className="value">
+          <strong><FormatPrice format="$0.00">{item.price}</FormatPrice>
+          </strong>
+        </section>
       </section>
       <section className="totalPrice">
         <section className="products__title">
           <h5>Total</h5>
         </section>
-        <section className="value"><strong>R$250</strong></section>
+        <section className="value">
+          <strong>
+            <FormatPrice format="$0.00">{item.price * item.quantity}</FormatPrice>
+          </strong>
+        </section>
       </section>
     </section>
   )

@@ -1,8 +1,8 @@
-import { MdDelete, MdClose } from "react-icons/md"
+import { MdDelete, MdClose, MdAdd, MdRemove } from "react-icons/md"
 import { ImCart } from "react-icons/im"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux";
-import { removeItem } from '../../../../store/cart'
+import { increment, removeItem } from '../../../../store/cart'
 import "./styles.css"
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,11 @@ export default function Overlay() {
   function removeItemCart(id) {
     dispatch(removeItem(id))
   }
+  console.log({ cart })
+
+  function incrementItemCart(quantity) {
+    dispatch(increment(quantity))
+  }
 
   return (
     <section id="overlay-open">
@@ -24,6 +29,7 @@ export default function Overlay() {
         </section>
         {cart.map(item => (
           <section key={item.id} className="overlay__details">
+            {/* <span className="item__quantity">{item.quantity}</span> */}
             <img src={item.image} alt="" />
             <section className="items__details">
               <p className="items__name" ><strong>{item.name}</strong></p>
@@ -35,6 +41,23 @@ export default function Overlay() {
                 onClick={() => removeItemCart(item.id)}
               >
                 <MdDelete /> excluir
+              </button>
+            </section>
+            <section className="quantity__value">
+              <button
+                type="button"
+                id="menos"
+                onClick={() => incrementItemCart(item.quantity)}
+              >
+                <MdRemove />
+              </button>
+              <p>{item.quantity}</p>
+              <button
+                type="button"
+                id="mais"
+                onClick={() => incrementItemCart(item.quantity)}
+              >
+                <MdAdd />
               </button>
             </section>
           </section>

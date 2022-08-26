@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useSelector, useDispatch } from 'react-redux'
+import FormatPrice from "../../../../utils/formatPrice"
 import Image from "../../../Common/Image";
 import Figure from "../../../Common/Figure";
 import Wrapper from "../../../Common/Wrapper";
@@ -28,9 +29,9 @@ export default function CarouselItem({ products }) {
     return null;
   }
 
-  function addItemCart(data) {
-    dispatch(addItem(data))
-    console.log(data)
+  function addItemToCart(item) {
+    dispatch(addItem(item))
+    console.log({ item })
   }
 
   return (
@@ -48,14 +49,18 @@ export default function CarouselItem({ products }) {
                   <p className="category">{category}</p>
                   <h2 className="name">{name}</h2>
                   <Prices className="prices">
-                    <p className="price">R${price}</p>
-                    <p className="oldprice"><s>R${oldprice}</s></p>
+                    <p className="price">
+                      <FormatPrice format="$0.00">{price}</FormatPrice>
+                    </p>
+                    <p className="oldprice">
+                      <s><FormatPrice format="$0.00">{oldprice}</FormatPrice></s>
+                    </p>
                   </Prices>
                   <ProductScore />
                   <MenuIcons id={id} name={name} />
                 </InfoProducts>
               </Wrapper>
-              <AddCartButton data={data} addItemCart={addItemCart} />
+              <AddCartButton data={data} addItemCart={addItemToCart} />
             </Wrapper>
           )
         })}

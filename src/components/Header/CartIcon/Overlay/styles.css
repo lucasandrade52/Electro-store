@@ -7,14 +7,22 @@
   transform: translateY(-100%);
   transition: transform .5ms,
     visibility 0ms linear .5ms;
-  padding: 12px;
-  width: 100%;
+  padding: 1rem;
+  width: 24rem;
+  right: 0;
   box-shadow: rgba(60, 64, 67, .3) 0 1px 2px 0;
+}
+
+@media (max-width: 650px) {
+  #overlay-open {
+    width: 22rem;
+    right: -48px;
+  }
 }
 
 #overlay-open:target {
   visibility: visible;
-  transform: translateY(1.1rem);
+  transform: translateY(2.5rem);
   transition: transform 500ms;
 }
 
@@ -45,8 +53,23 @@
 .overlay__details {
   display: flex;
   align-items: center;
-  gap: 8px;
-  justify-content: center;
+  gap: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item__quantity {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  background-color: #D10024;
+  font-size: 11px;
+  top: 0;
+  left: 0;
+  color: #fff;
 }
 
 .overlay__details img {
