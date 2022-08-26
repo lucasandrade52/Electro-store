@@ -1,7 +1,7 @@
 
 
-export default function Title({ children }) {
+export default function Title({ children, href }) {
   return (
-    <h1>{children}</h1>
+    <h1 ><a href={href}>{children}</a></h1>
   )
 }

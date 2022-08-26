@@ -9,7 +9,7 @@
 
 .campaign-card {
   width: 30%;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,7 @@
   background: #D10024;
   opacity: 0.9;
   overflow: hidden;
-  transform: skewX(-40deg) translateX(-100%);
+  transform: skewX(-40deg) translateX(-110%);
 }
 
 .campaign-card__img {

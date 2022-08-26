@@ -7,7 +7,7 @@
   gap: 24px;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
+  padding: 12px 48px;
   position: relative;
   scroll-behavior: smooth;
   overflow-x: auto;
@@ -87,12 +87,12 @@
 .buy {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 60px;
   background-color: #000;
   color: #fff;
   cursor: pointer;
+  transition: width .5s, border-radius .5s;
+  position: relative;
   visibility: hidden;
 }
 
@@ -107,6 +107,11 @@
   border-radius: 40px;
   border: 2px solid transparent;
   cursor: pointer;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: opacity .25s;
 }
 
 .btn-buy:hover {
@@ -114,15 +119,33 @@
   width: 70%;
   color: #D10024;
   border: 3px solid #D10024;
-  background-image: url(/public/images/cart.svg);
-  background-repeat: no-repeat;
-  background-size: 10%;
-  background-position: 15%;
   display: flex;
   padding-right: 10px;
   gap: 4px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.btn-icon {
+  opacity: 0;
+}
+
+.btn-buy:focus {
+  width: 40px;
+  background-color: #32BEA6;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-image: url(/public/images/verifica.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+}
+
+.btn-buy:focus .btn-text {
+  opacity: 0;
 }
 
 .controlCarousel {

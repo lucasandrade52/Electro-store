@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { ProductData } from "../ProductData"
+import { useSelector, useDispatch } from 'react-redux'
+import FormatPrice from "../../../../utils/formatPrice"
 import Image from "../../../Common/Image";
 import Figure from "../../../Common/Figure";
 import Wrapper from "../../../Common/Wrapper";
@@ -9,8 +10,11 @@ import Prices from "../../Prices";
 import ProductScore from "../../Stars/ProductScore";
 import AddCartButton from "../../AddCartButton"
 import Control from "../../../Common/Control"
+import { addItem } from "../../../../store/cart"
 
 export default function CarouselItem({ products }) {
+  const ProductData = useSelector((state) => state.products);
+  const dispatch = useDispatch();
   const carousel = useRef(null)
 
   const nextSlide = () => {
@@ -23,6 +27,11 @@ export default function CarouselItem({ products }) {
 
   if (!Array.isArray(products) || products.length <= 0) {
     return null;
+  }
+
+  function addItemToCart(item) {
+    dispatch(addItem(item))
+    console.log({ item })
   }
 
   return (
@@ -40,14 +49,18 @@ export default function CarouselItem({ products }) {
                   <p className="category">{category}</p>
                   <h2 className="name">{name}</h2>
                   <Prices className="prices">
-                    <p className="price">R${price}</p>
-                    <p className="oldprice"><s>R${oldprice}</s></p>
+                    <p className="price">
+                      <FormatPrice format="$0.00">{price}</FormatPrice>
+                    </p>
+                    <p className="oldprice">
+                      <s><FormatPrice format="$0.00">{oldprice}</FormatPrice></s>
+                    </p>
                   </Prices>
                   <ProductScore />
                   <MenuIcons id={id} name={name} />
                 </InfoProducts>
               </Wrapper>
-              <AddCartButton />
+              <AddCartButton data={data} addItemCart={addItemToCart} />
             </Wrapper>
           )
         })}

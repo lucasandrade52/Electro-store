@@ -1,0 +1,118 @@
+#overlay-open {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  color: #000;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform .5ms,
+    visibility 0ms linear .5ms;
+  padding: 1rem;
+  width: 24rem;
+  right: 0;
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 2px 0;
+}
+
+@media (max-width: 650px) {
+  #overlay-open {
+    width: 22rem;
+    right: -48px;
+  }
+}
+
+#overlay-open:target {
+  visibility: visible;
+  transform: translateY(2.5rem);
+  transition: transform 500ms;
+}
+
+.overlay__products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.overlay__btnBuy {
+  height: 32px;
+  background-color: #3483fa;
+  border: none;
+  cursor: pointer;
+  transition: background-color .4s;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.overlay__btnBuy:hover {
+  background-color: #1259c3;
+  opacity: 80%;
+}
+
+.overlay__details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item__quantity {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  background-color: #D10024;
+  font-size: 11px;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+
+.overlay__details img {
+  width: 50%;
+  height: 50px;
+}
+
+.overlay__btnDelete {
+  display: flex;
+  height: 100%;
+  text-transform: capitalize;
+  background-color: #d4d5d6;
+  color: #000;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.overlay__btnDelete:hover {
+  color: #ffffff;
+  background-color: #D10024;
+}
+
+.overlay__title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.overlay-close {
+  font-size: 20px;
+  display: flex;
+}
+
+.items__details {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.overlay__btn {
+  width: 100%;
+}

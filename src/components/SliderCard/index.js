@@ -7,6 +7,7 @@ import Title from "../Common/TitleH2";
 import Control from "../Common/Control"
 import './styles.css'
 import Wrapper from "../Common/Wrapper";
+import FormatPrice from "../../utils/formatPrice"
 
 
 export default function SliderCard() {
@@ -28,8 +29,14 @@ export default function SliderCard() {
               <p className="category">{data.category}</p>
               <h2 className="name">{data.name}</h2>
               <Prices className="prices">
-                <p className="price">R${data.price}</p>
-                <p className="oldprice"><s>R${data.oldprice}</s></p>
+                <p className="price">
+                  <FormatPrice format="$0.00">{data.price}</FormatPrice>
+                </p>
+                <p className="oldprice">
+                  <s>
+                    <FormatPrice format="$0.00">{data.oldprice}</FormatPrice>
+                  </s>
+                </p>
               </Prices>
             </InfoProducts>
           </section>
