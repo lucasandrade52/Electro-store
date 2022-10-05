@@ -1,20 +1,20 @@
 import { ImCart } from "react-icons/im"
 import { useSelector } from "react-redux"
-import OverlayItems from "./Overlay"
+import MiniCart from "./MiniCart"
 
-import '../CartIcon/Overlay/styles.css'
+import '../CartIcon/MiniCart/styles.css'
 
 export default function CartIcon() {
-  const length = useSelector(state => state.cart.length)
+  const length = useSelector(state => state.cart.cartTotalQuantity)
 
   return (
     <>
       <div className="cart">
-        <a href="#overlay-open"><ImCart /></a>
+        <a href="#MiniCart-open"><ImCart /></a>
         <span>Seu carrinho</span>
         <div className="numbers">{length}</div>
       </div>
-      <OverlayItems />
+      <MiniCart />
     </>
   )
 }

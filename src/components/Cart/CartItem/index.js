@@ -1,10 +1,8 @@
-import { useSelector } from "react-redux"
 import { MdAdd, MdRemove, MdDelete } from "react-icons/md"
 import './styles.css'
 import FormatPrice from '../../../utils/formatPrice'
 
-export default function CartItem({ item, removeItemCart, incrementItemCart }) {
-  const length = useSelector(state => state.cart.length)
+export default function CartItem({ item, removeItemCart, incrementItemCart, decrementItemCart }) {
 
   return (
     <section className="main__products">
@@ -27,22 +25,29 @@ export default function CartItem({ item, removeItemCart, incrementItemCart }) {
         <section className="products__title">
           <h5>Quantidade</h5>
         </section>
-        <section className="quantity__value">
-          <button
-            type="button"
-            id="menos"
-            onClick={() => incrementItemCart(item.quantity - 1)}
-          >
-            <MdRemove />
-          </button>
-          <p>{item.quantity}</p>
-          <button
-            type="button"
-            id="mais"
-            onClick={() => incrementItemCart(item.quantity + 1)}
-          >
-            <MdAdd />
-          </button>
+        <section className="minicart__quantity">
+          <section className="quantity__value">
+            <button
+              type="button"
+              id="menos"
+              onClick={() => decrementItemCart(item.id)}
+            >
+              <MdRemove />
+            </button>
+            <p>{item.cartQuantity}</p>
+            <button
+              type="button"
+              id="mais"
+              onClick={() => incrementItemCart(item.id)}
+            >
+              <MdAdd />
+            </button>
+          </section>
+          <p>
+            {item.stock === 1 ? (<small>({item.stock} disponível)</small>) : (
+              <small>({item.stock} disponíveis)</small>
+            )}  
+          </p>
         </section>
       </section>
       <section className="price">
@@ -60,7 +65,7 @@ export default function CartItem({ item, removeItemCart, incrementItemCart }) {
         </section>
         <section className="value">
           <strong>
-            <FormatPrice format="$0.00">{item.price * item.quantity}</FormatPrice>
+            <FormatPrice format="$0.00">{item.price * item.cartQuantity}</FormatPrice>
           </strong>
         </section>
       </section>

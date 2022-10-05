@@ -18,7 +18,7 @@ export default function Footer() {
       </section>
       <section className="container__footer--bottom">
         <Payments />
-        <p className="copyright">Copyright ©2022 All rights reserved | This template is made with  by <span>Colorlib</span>
+        <p className="copyright">Copyright ©2022 All rights reserved | This template is inspired by <span>colorlib.</span>
         </p>
       </section>
     </section>

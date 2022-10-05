@@ -6,7 +6,7 @@ export const ProductData = [
     category: 'Notebook',
     price: 950.00,
     oldprice: 999.00,
-    quantity: 1
+    stock: 4,
   },
   {
     id: '2',
@@ -15,7 +15,7 @@ export const ProductData = [
     category: 'Notebook',
     price: 750.00,
     oldprice: 949.00,
-    quantity: 1
+    stock: 6,
   },
   {
     id: '3',
@@ -24,7 +24,7 @@ export const ProductData = [
     category: 'Notebook',
     price: 850.00,
     oldprice: 979.00,
-    quantity: 1
+    stock: 8,
   },
   {
     id: '4',
@@ -33,7 +33,7 @@ export const ProductData = [
     category: 'Notebook',
     price: 890.00,
     oldprice: 990.00,
-    quantity: 1
+    stock: 10,
   },
   {
     id: '5',
@@ -42,7 +42,7 @@ export const ProductData = [
     category: 'smartphone',
     price: 2000.00,
     oldprice: 5999.00,
-    quantity: 1
+    stock: 3,
   },
   {
     id: '6',
@@ -51,7 +51,7 @@ export const ProductData = [
     category: 'smartphone',
     price: 2290.20,
     oldprice: 4949.00,
-    quantity: 1
+    stock: 7,
   },
   {
     id: '7',
@@ -60,7 +60,7 @@ export const ProductData = [
     category: 'smartphone',
     price: 1850.00,
     oldprice: 2379.00,
-    quantity: 1
+    stock: 1,
   },
   {
     id: '8',
@@ -69,7 +69,7 @@ export const ProductData = [
     category: 'smartphone',
     price: 4890.00,
     oldprice: 5990.00,
-    quantity: 1
+    stock: 5,
   },
   {
     id: '9',
@@ -78,7 +78,7 @@ export const ProductData = [
     category: 'câmera',
     price: 24850.30,
     oldprice: 32379.00,
-    quantity: 1
+    stock: 9,
   },
   {
     id: '10',
@@ -87,7 +87,7 @@ export const ProductData = [
     category: 'câmera',
     price: 5090.00,
     oldprice: 5990.00,
-    quantity: 1
+    stock: 3,
   },
   {
     id: '11',
@@ -96,7 +96,7 @@ export const ProductData = [
     category: 'acessórios',
     price: 586.55,
     oldprice: 705.34,
-    quantity: 1
+    stock: 11,
   },
   {
     id: '12',
@@ -105,6 +105,6 @@ export const ProductData = [
     category: 'acessórios',
     price: 590.00,
     oldprice: 740.30,
-    quantity: 1
+    stock: 200,
   },
 ]

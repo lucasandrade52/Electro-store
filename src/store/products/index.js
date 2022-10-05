@@ -1,7 +1,16 @@
-import { ProductData } from "../../components/GallerieProducts/Carousel/ProductData"
+import { createAction, createSlice } from '@reduxjs/toolkit'
 
-const INITIAL_STATE = ProductData
+const INITIAL_STATE = []
 
-export default function reducer(state = INITIAL_STATE, action) {
-  return state
-}
+const productSlice = createSlice({
+  name:"products",
+  initialState: INITIAL_STATE,
+  reducers: {
+    addProducts: (state, action) => {
+      return state = [...action.payload]
+    }
+  }
+})
+
+export const { addProducts } = productSlice.actions;
+export default productSlice.reducer 
