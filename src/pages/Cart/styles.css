@@ -1,21 +1,13 @@
 .body {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
   min-height: 100vh;
   position: relative;
 }
 
-.empty {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 64px;
-  text-align: center;
-}
-
 .container {
-  margin: 50px auto 0;
+  margin: 36px auto 36px;
   width: 70vw;
-  min-height: 75vh;
+  min-height: calc(100vh - 170px);
   display: flex;
   border-radius: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -57,16 +49,48 @@
 
 .products__title {
   padding: 24px 0;
-  color: #9D9D9D;
+  color: #9d9d9d;
   text-transform: uppercase;
+}
+
+.container__right footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  font-weight: bold;
+  transition: all 0.4s;
 }
 
 .container__right footer a {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: #D10024;
+  color: #d10024;
   font-weight: bold;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 64px;
+  text-align: center;
+  min-height: calc(100vh - 100px);
+}
+
+.empty footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #d10024;
+  font-weight: bold;
+}
+
+.empty footer a svg {
+  width: 35px;
+  height: 35px;
 }
 
 .container__right footer a svg {
@@ -75,7 +99,7 @@
 }
 
 .container__left {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   width: 35%;
   border-radius: 0px 8px 8px 0px;
   padding: 24px 35px;
@@ -102,23 +126,23 @@
   justify-content: space-between;
 }
 
-footer button {
+.container__left footer button {
   height: 32px;
   background-color: #3483fa;
   border: none;
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
   color: #fff;
   font-weight: bold;
   border-radius: 4px;
 }
 
-footer button:hover {
+.container__left footer button:hover {
   opacity: 80%;
   background-color: #1259c3;
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     width: 80vw;
@@ -130,7 +154,7 @@ footer button:hover {
   }
 }
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .container {
     margin: 12px auto 0;
     width: 90vw;
@@ -149,19 +173,17 @@ footer button:hover {
 }
 
 .body__footer {
-  height: 35px;
-  position: absolute;
-  bottom: 0px;
+  height: 44px;
   font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #c5c7cc34;
+  background-color: #a7a5a6;
   cursor: pointer;
 }
 
 .body__footer h2 {
-  font-weight: 400;
+  font-weight: 600;
   color: #000;
 }

@@ -2,16 +2,16 @@ import Figure from "../Common/Figure"
 import Image from "../Common/Image"
 import InfoProducts from "../GallerieProducts/InfoProducts"
 import Prices from "../GallerieProducts/Prices"
-import { ProductData } from "../GallerieProducts/Carousel/ProductData"
 import Title from "../Common/TitleH2";
 import Control from "../Common/Control"
 import './styles.css'
 import Wrapper from "../Common/Wrapper";
 import FormatPrice from "../../utils/formatPrice"
-
+import { useSelector } from "react-redux";
 
 export default function SliderCard() {
-  const filteredArray = ProductData.slice(0, 3);
+  const products = useSelector((state) => state.products);
+  const filteredArray = products.slice(0, 3);
 
   return (
     <Wrapper className="container__sliders">

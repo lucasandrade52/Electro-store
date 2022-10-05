@@ -12,8 +12,8 @@ import AddCartButton from "../../AddCartButton"
 import Control from "../../../Common/Control"
 import { addItem } from "../../../../store/cart"
 
-export default function CarouselItem({ products }) {
-  const ProductData = useSelector((state) => state.products);
+export default function CarouselItem() {
+  const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const carousel = useRef(null)
 
@@ -31,13 +31,12 @@ export default function CarouselItem({ products }) {
 
   function addItemToCart(item) {
     dispatch(addItem(item))
-    console.log({ item })
   }
 
   return (
     <>
       <section className="container__cards" ref={carousel}>
-        {ProductData.map((data, index) => {
+        {products?.map((data, index) => {
           const { id, category, image, name, price, oldprice } = data
           return (
             <Wrapper key={index} className="container__card" >

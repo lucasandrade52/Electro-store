@@ -13,15 +13,18 @@ export default function BannerCounter({ className }) {
   const seconds = Math.floor(totalInSeconds % 60)
 
   useEffect(() => {
+    let timeout
     if (totalInSeconds === 0) {
       alert("Promoção acabou")
       return
     }
     else {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setTotalInSeconds(totalInSeconds - 1)
       }, 1000)
     }
+
+    return () => clearTimeout(timeout)
   }, [totalInSeconds])
 
   return (

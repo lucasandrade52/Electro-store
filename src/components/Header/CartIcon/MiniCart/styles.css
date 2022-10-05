@@ -1,0 +1,163 @@
+#MiniCart-open {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  color: #000;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.5ms, visibility 0ms linear 0.5ms;
+  padding: 1rem;
+  width: 25rem;
+  right: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0;
+}
+
+@media (max-width: 650px) {
+  #MiniCart-open {
+    width: 22rem;
+    right: -48px;
+  }
+}
+
+#MiniCart-open:target {
+  visibility: visible;
+  transform: translateY(2.5rem);
+  transition: transform 500ms;
+}
+
+.MiniCart__products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.MiniCart__btnBuy {
+  height: 2rem;
+  background-color: #3483fa;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.MiniCart__btnBuy:hover {
+  background-color: #1259c3;
+  opacity: 80%;
+}
+
+.MiniCart__details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.MiniCart__details img {
+  width: 50%;
+  height: 50px;
+}
+
+.MiniCart__btnDelete {
+  display: flex;
+  height: 100%;
+  text-transform: capitalize;
+  background-color: #d4d5d6;
+  color: #000;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.MiniCart__btnDelete:hover {
+  color: #ffffff;
+  background-color: #d10024;
+}
+
+.MiniCart__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.MiniCart__icon {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.MiniCart-btn {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 2px;
+  transition: all 0.3s;
+}
+
+.MiniCart-btn:hover {
+  color: #ffffff;
+  background-color: #d10024;
+  border-radius: 4px;
+}
+
+.MiniCart-close {
+  font-size: 20px;
+  display: flex;
+  padding: 2px;
+}
+
+.MiniCart-close:hover {
+  background-color: #e5e7eb;
+  padding: 2px;
+}
+
+.items__details {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.items__price {
+  font-weight: 500;
+}
+
+.minicart__quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.minicart__quantity small:last-child {
+  font-size: 12px;
+}
+
+.miniCart__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  border-top: 1px solid #e4e7ed;
+  padding-top: 1rem;
+}
+
+.MiniCart__btn {
+  width: 100%;
+}
+
+.miniCart__subtotal {
+  width: 100%;
+}
